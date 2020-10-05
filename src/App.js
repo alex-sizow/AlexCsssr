@@ -1,6 +1,6 @@
-import React from 'react'
-import './App.css'
-import productData from './products.json'
+import React from 'react';
+import './App.css';
+import productData from './products.json';
 
 function App() {
 	return (
@@ -9,12 +9,12 @@ function App() {
 			<ul class='list'>
 				{productData.map((product) => {
 					if (product.id < 4) {
-						return <li>{product.name}</li>
+						return <li>{product.name}</li>;
 					}
 				})}
 			</ul>
 		</div>
-	)
+	);
 }
 
-export default App
+export default App;
