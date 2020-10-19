@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import productData from './products.json';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<div class='header'>Список товаров</div>
+			<ul class='list'>
+				{productData.map((product) => {
+					if (product.id < 4) {
+						return <li>{product.name}</li>;
+					}
+				})}
+			</ul>
+		</div>
+	);
 }
 
 export default App;
